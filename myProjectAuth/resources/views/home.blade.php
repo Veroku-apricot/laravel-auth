@@ -20,10 +20,25 @@
 
                       <input type="file" name="icon" class="form-control border-0">
 
-                      <input type="submit" name="" value="Submit">
+                      <br>
+
+                      <input type="submit" name="" value="Submit Icon">
+                      <a href="{{ route('delete-icon') }}" class="btn btn-danger">Delete Icon</a>
                     </form>
                 </div>
             </div>
+
+            <br>
+
+            @if (Auth::user() -> icon)
+              <div class="card">
+                <div class="card-header">Selected icon</div>
+
+                <div class="card-body">
+                  <img src="{{ asset('storage/icon/' . Auth::user() -> icon) }}" width="300px" alt="">
+                </div>
+              </div>
+            @endif
         </div>
     </div>
 </div>

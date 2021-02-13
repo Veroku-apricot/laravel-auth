@@ -35,7 +35,17 @@ class HomeController extends Controller
       $user -> icon = $destFile;
       $user -> save();
 
-      dd($image, $destFile);
+      // dd($image, $destFile);
 
+      return redirect() -> back();
+    }
+
+    public function deleteIcon() {
+
+      $user = Auth::user();
+      $user -> icon = null;
+      $user -> save();
+
+      return redirect() -> back();
     }
 }
