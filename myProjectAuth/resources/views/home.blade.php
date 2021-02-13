@@ -23,7 +23,7 @@
                       <br>
 
                       <input type="submit" name="" value="Submit Icon">
-                      <a href="{{ route('delete-icon') }}" class="btn btn-danger">Delete Icon</a>
+                      <a href="{{ route('clear-icon') }}" class="btn btn-danger">Delete Icon</a>
                     </form>
                 </div>
             </div>
